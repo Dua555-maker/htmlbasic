@@ -1,37 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Basic</title>
-  <link rel ="stylesheet" href="CSS/style.css">
-  <style>
-    h3{ color: red; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Form</title>
 </head>
+
 <body>
-  <h1 style="color: blue; background-color: orange;">Home Page Heading 1</h1>
-  <h1 class="heading1">Home Page Heading 1</h1>
-  <h2 style="color: green">Home Page Heading 2</h2>
-  <h3 id="heading3">Home Page Heading 3</h3>
-  <h3>Home Page Heading 3</h3>
-  <h4>Home Page Heading 4</h4>  
-  <h5><mark>Home Page Heading 5</mark></h5>
-  <!-- <h6>Home Page Heading 6</h6> -->
-  <p>
-    <i><b>a</b></i><sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>
-  </p>
-  <a href="https://www.ubru.ac.th" target="_blank">
-    <img title="UBRU Home Page" src="sunflower.png" alt="Sunflower Image" width="32px" height="32px">
-  </a>
-  <br>
-  <img src ="image/sunflower.png" alt="Sunflower Image" width="64px" height="64px">
-  <img src ="https://www.pokemon.com/static-assets/content-assets/cms2/img/pokedex/full/349.png" width="128px" height="128px">
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ipsa inventore asperiores cumque mollitia temporibus, quas possimus voluptates earum hic nisi odio ipsam rerum doloremque perferendis architecto magnam eligendi rem?
-  Eligendi laborum perspiciatis cum quod repellendus aut soluta velit, dicta iure placeat commodi animi voluptates earum, esse beatae deleniti praesentium inventore iste debitis mollitia doloremque. Aspernatur in accusamus fugit pariatur.
-  Suscipit blanditiis earum porro velit consequatur, quaerat numquam quisquam explicabo expedita consequuntur incidunt nostrum aliquam! Autem culpa perferendis, officia excepturi provident, quisquam iusto est explicabo natus itaque nisi, magnam omnis?
-  At magni deserunt hic nulla? Non nam aperiam asperiores? Quidem repellat corrupti nam quasi cum et nihil consequatur, eos facere, quos earum sed culpa laudantium beatae necessitatibus qui error voluptas?
-  Aut ad repellendus rerum quisquam, doloremque odit consectetur. Sed officiis quo rem, ducimus minima, perspiciatis commodi blanditiis ad ratione, eaque sint voluptatem enim neque a! Dolores nulla commodi alias maxime?
-  </p>  
+    <h3 style="text-align: center;">แบบสอบถาม</h3>
+    <hr>
+    <form action="" method="get">
+        <table style="margin-left: auto; margin-right: auto;background-color: antiquewhite;">
+            <tr>
+                <th colspan="2" style="text-align: left;">ข้อมูลผู้ตอบแบบสอบถาม</th>
+            </tr>
+            <tr>
+                <td><b>ชื่อ-นามสกุล</b></td>
+                <td><input type="text" id="fullname" name="fullname" size="42" maxlength="50"></td>
+            </tr>
+            <tr>
+                <td><b>รหัสนักศึกษา</b></td>
+                <td><input type="text" id="studentid" name="studentid" size="42" maxlength="50"></td>
+            </tr>
+            <tr>
+                <td><b>เพศ</b></td>
+                <td>
+                    <input type="radio" id="male" name="gender" value="Male" checked>ชาย
+                    <input type="radio" id="female" name="gender" value="Female">หญิง
+                </td>
+            </tr>
+            <tr>
+                <td><b>สังกัดคณะ</b></td>
+                <td>
+                    <select style="width: auto; height: auto;" name="faculty" size="11">
+                        <option>วิทยาศาสตร์</option>
+                        <option>วิทยาการคอมพิวเตอร์</option>
+                        <option>ครุศาสตร์</option>
+                        <option>บริหารธุรกิจและการจัดการ</option>
+                        <option>มนุษยศาสตร์</option>
+                        <option>เทคโนโลยีอุตสาหกรรม</option>
+                        <option>เกษตรศาสตร์</option>
+                        <option>พยาบาลศาสตร์</option>
+                        <option>สาธารณสุขศาสตร์</option>
+                        <option>แพทย์แผนไทยและทางเลือก</option>
+                        <option>นิติศาสตร์</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>แม่สีที่ชื่นชอบ</b></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" id="red" name="color" value="Red">สีแดง
+                    <input type="checkbox" id="green" name="color" value="Green">สีเขียว
+                    <input type="checkbox" id="blue" name="color" value="Blue">สีน้ำเงิน
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>ผลไม้ที่ชื่นชอบ</b></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" id="mango" name="fruit" value="Mango">มะม่วง
+                    <input type="checkbox" id="custardapple" name="fruit" value="CustardApple">น้อยหน่า
+                    <input type="checkbox" id="durian" name="fruit" value="Durian">ทุเรียน
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" id="longan" name="fruit" value="Longan">ลำใย
+                    <input type="checkbox" id="guava" name="fruit" value="Guava">ฝรั่ง
+                    <input type="checkbox" id="watermelon" name="fruit" value="Watermelon">แตงโม
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><b>อาหารที่ชื่นชอบ</b></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" id="tomyum" name="food" value="TomYum">ต้มยำกุ้ง
+                    <input type="checkbox" id="omelette" name="food" value="Omelette">ไข่เจียวหมูสับ
+                    <input type="checkbox" id="khagai" name="food" value="KhaGai">แกงข่าไก่
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="checkbox" id="greencurry" name="food" value="GreenCurry">แกงเขียวหวานไก่
+                    <input type="checkbox" id="padthai" name="food" value="PadThai">ผัดไทย
+                    <input type="checkbox" id="radna" name="food" value="RadNa">ราดหน้าหมี่กรอบ
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;">
+                    <input type="submit" value="บันทึก">
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
+
 </html>
